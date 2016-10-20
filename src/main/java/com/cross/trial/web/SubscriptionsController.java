@@ -31,7 +31,7 @@ public class SubscriptionsController {
      * @return JSON binded collection of subscriptions.
      * @throws IOException if some error while communications occur.
      */
-    @RequestMapping(path = "subscriptions",
+    @RequestMapping(path = "/subscriptions",
             method = RequestMethod.GET,
             produces = {MediaType.APPLICATION_JSON_VALUE})
     public final Collection<Subscription> subscriptions() throws IOException {
@@ -45,7 +45,7 @@ public class SubscriptionsController {
      * @return An {@code Subscription} instance got from repository.
      * @throws IOException if some error occurs while communication.
      */
-    @RequestMapping(path = "subscriptions/{subscription-id}",
+    @RequestMapping(path = "/subscriptions/{subscription-id}",
             method = RequestMethod.GET,
             produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     public final Subscription subscriptionsById(
