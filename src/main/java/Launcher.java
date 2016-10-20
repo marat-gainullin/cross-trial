@@ -1,6 +1,7 @@
 import org.apache.catalina.startup.Tomcat;
 
 import java.net.URL;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Optional;
 
@@ -14,12 +15,11 @@ public class Launcher {
     public static void main(String[] args) throws Exception {
         String contextPath = "/cross";
         URL codeLocation = Launcher.class.getProtectionDomain().getCodeSource().getLocation();
-        String appBase = Paths.get(codeLocation.toURI()).toFile().getAbsolutePath();
-        System.out.println("appBase: " + appBase);
+        Path selfPath = Paths.get(codeLocation.toURI());
         Tomcat tomcat = new Tomcat();
         tomcat.setPort(Integer.valueOf(port.orElse("8080")));
         tomcat.getHost().setAppBase(".");
-        tomcat.addWebapp(contextPath, appBase);
+        tomcat.addWebapp(contextPath, selfPath.toFile().getAbsolutePath());
         tomcat.start();
         tomcat.getServer().await();
     }
