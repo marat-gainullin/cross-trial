@@ -41,7 +41,7 @@
                             <warName>${project.artifactId}</warName>
                             <webResources>
                                 <resource>
-                                    <directory>src/main/cross-trial-client/</directory>
+                                    <directory>client-src/</directory>
                                     <includes>
                                        <include>app/**/*</include>
                                        <include>web/**/*</include>
