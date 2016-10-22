@@ -8,6 +8,8 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.persistence.NoResultException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Collection;
 
@@ -35,6 +37,11 @@ public class SubscriptionsController {
             method = RequestMethod.GET,
             produces = {MediaType.APPLICATION_JSON_VALUE})
     public final Collection<Subscription> subscriptions() throws IOException {
+        HttpServletRequest request;
+        request.getSession().invalidate();
+        request.getContextPath();
+        HttpServletResponse response;
+        response.sendRe
         return subscriptionsStore.subscriptions();
     }
 

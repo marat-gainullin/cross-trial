@@ -6,12 +6,16 @@ require(['environment', 'logger'], function (F, Logger) {
     var global = this;
     F.cacheBust(true);
     //F.export(global);
-    require('subscriptions', function(subscriptions){
+    require('subscriptions', function (subscriptions) {
         var m = new subscriptions();
-        m.show();
-    }, function(e){
+        m.start(function (form) {
+            form.show();
+        }, function (e) {
+            Logger.severe(e);
+        });
+    }, function (e) {
         Logger.severe(e);
-        if(global.document){
+        if (global.document) {
             var messageParagraph = global.document.createElement('p');
             global.document.body.appendChild(messageParagraph);
             messageParagraph.innerHTML = 'An error occured while require(\'subscriptions\'). Error: ' + e;

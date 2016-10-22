@@ -1,3 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<datamodel>
+<?xml version="1.0" encoding="UTF-8"?><datamodel>
+  <entity Name="subscriptions_all" Title="" entityHeight="200" entityIconified="false" entityId="147712907025100" entityLocationX="119" entityLocationY="126" entityWidth="150" queryId="subscriptions_all" tableName="" tableSchemaName=""/>
 </datamodel>

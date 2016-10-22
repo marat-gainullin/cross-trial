@@ -1,6 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><layout title="" view="view">
-  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="300px" prefWidth="400px"/>
+<?xml version="1.0" encoding="UTF-8"?><layout title="Subscriptions view" view="view">
+  <AnchorsPane background="#ffffff" cursor="0" name="view" prefHeight="362px" prefWidth="636px"/>
   <Button cursor="0" name="btnClose" parent="view" prefHeight="30px" prefWidth="100px" text="Close">
     <AnchorsPaneConstraints bottom="10px" height="30px" right="10px" width="100px"/>
   </Button>
+  <ModelGrid cursor="0" name="modelGrid" parent="view" prefHeight="242px" prefWidth="290px">
+    <AnchorsPaneConstraints height="242px" left="330px" top="80px" width="290px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="amount" name="colAmount" title="colAmount" width="132px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="description" name="colDescription" title="colDescription" width="132px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
+  <ToolBar cursor="0" name="subscriptionTools" parent="view" prefHeight="30px" prefWidth="624px">
+    <AnchorsPaneConstraints height="30px" left="0px" right="12px" top="0px"/>
+  </ToolBar>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnAdd" parent="subscriptionTools" prefHeight="30px" prefWidth="100px" text="Add" verticalTextPosition="3">
+    <font family="Lucida Grande" size="11" style="0"/>
+  </Button>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnDelete" parent="subscriptionTools" prefHeight="30px" prefWidth="100px" text="Delete" verticalTextPosition="3">
+    <font family="Lucida Grande" size="11" style="0"/>
+  </Button>
+  <Button cursor="0" focusable="false" horizontalTextPosition="0" name="btnEdit" parent="subscriptionTools" prefHeight="30px" prefWidth="100px" text="Edit" verticalTextPosition="3">
+    <font family="Lucida Grande" size="11" style="0"/>
+  </Button>
+  <ModelGrid cursor="0" name="modelGrid1" parent="view" prefHeight="242px" prefWidth="301px">
+    <AnchorsPaneConstraints bottom="40px" left="20px" top="80px" width="301px"/>
+    <ServiceGridColumn name="colService"/>
+    <ModelGridColumn field="amount" name="colAmount" title="colAmount" width="138px">
+      <ModelSpin max="1.7976931348623157E308" min="-1.7976931348623157E308"/>
+    </ModelGridColumn>
+    <ModelGridColumn field="description" name="colDescription" title="colDescription" width="137px">
+      <ModelFormattedField/>
+    </ModelGridColumn>
+  </ModelGrid>
 </layout>

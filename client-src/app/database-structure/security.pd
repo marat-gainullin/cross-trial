@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><datamodel datasource="null">
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="147713141231300" entityLocationX="33" entityLocationY="18" entityWidth="150" tableName="USR_ROLES"/>
+  <fieldsEntity entityHeight="200" entityIconified="false" entityId="147713144107800" entityLocationX="223" entityLocationY="9" entityWidth="150" tableName="APP_USERS"/>
+</datamodel>

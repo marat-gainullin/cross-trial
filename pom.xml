@@ -144,6 +144,15 @@
                                 WEB-INF/lib/tomcat*.jar
                             </packagingExcludes>
                             <warName>${project.artifactId}-standalone</warName>
+                            <webResources>
+                                <resource>
+                                    <directory>client-src/</directory>
+                                    <includes>
+                                        <include>app/**/*</include>
+                                        <include>web/**/*</include>
+                                    </includes>
+                                </resource>
+                            </webResources>
                         </configuration>
                     </plugin>
                     <plugin>
